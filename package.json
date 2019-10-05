@@ -19,7 +19,7 @@
     "days"
   ],
   "author": "Patrick Sjöberg",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pazsea/day-time-interval-function/issues"
   },
