@@ -1,7 +1,7 @@
 {
   "name": "day-interval-function",
-  "version": "1.0.0",
-  "description": "Run your own functions on certain weekdays and time slots",
+  "version": "1.0.1",
+  "description": "I wanted to create a function that I could just enter which days and at what range of time during those days a function would run. Also this function would run at that time every week. For example: If I had a store that is open between 10:00 - 15:00 every monday, I would like to run a function that changes from closed paragraph to an open paragraph and vice versa.  So I created this npm package! Hope it works well! Keep on reading to see how you can implement it.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

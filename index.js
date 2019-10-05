@@ -1,8 +1,8 @@
-module.exports = function intervalChecker(
+module.exports.intervalChecker = (
   daysAndTimeSlots,
   options,
   myAwesomeFunction
-) {
+) => {
   var weekdays = [
     "sunday",
     "monday",

@@ -20,7 +20,7 @@ Keep on reading to see how you can implement it.
 In your root folder for you project, open up an terminal and enter:
 
    ```shell
-   npm install
+   npm i day-interval-function
 
    ```
  
@@ -30,7 +30,7 @@ In your root folder for you project, open up an terminal and enter:
 **1.** Import FUNCTION into you project.
 
    ```shell
-   IMPORT FUNCTION
+   import { intervalChecker } from "day-interval-function";
 
    ```
 
@@ -51,7 +51,7 @@ In your root folder for you project, open up an terminal and enter:
 
 **3.** Create the dayAndTimeSlots variable
 
-Enter which days and time slots that you want your own function to run.
+Enter which days and time slots that you want your own function to run. From beginning to end. Doesnt support range over midnight.
 
    ```shell
    const daysAndTimeSlots = [
