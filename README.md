@@ -30,7 +30,7 @@ import { intervalChecker } from "day-interval-function";
 
 ```
 
-**2.** Create the option variable.
+**2.** Create the options oject containing your settings.
 
 Write your timezone and time format. This package supports both 24 and 12 hour format.
 
@@ -44,7 +44,7 @@ timeFormat: 24,
 
 **3.** Create the dayAndTimeSlots variable
 
-Enter which days and time slots that you want your own function to run. First string in time slot array is beginning time and the second is the ending time. Doesnt support range over midnight. For that you need to use change two days to true.
+Enter which days and time slots that you want your own function to run. First string in time slot array is the start time and the second is the ending time. Doesnt support range over midnight. For that you need to change two days to true.
 
 ```shell
 const daysAndTimeSlots = [
@@ -94,7 +94,7 @@ Otherwise the function cannot run and will display an console log telling you so
 
 **4.** Run the function
 
-As you can see the function you get require four arguments although one is optional. First is the days and time slots you have selected, second is the options, third is what function you want to run at that given time, and fourth is what function you want to run when time is NOT in your time slots. This is possible to run without the functionWithinRange but remember to defined that as null before you continue.
+As you can see the function you get require four arguments although one is optional. First is the days and time slots you have selected, second is the options, third is what function you want to run at that given time, and fourth is what function you want to run when time is NOT in your time slots. It is possible to run without the functionWithinRange or functionOutOfRange but remember to defined that as null before you continue.
 
 ```shell
 intervalChecker(daysAndTimeSlots, options, functionWithinRange, functionOutOfRange)
