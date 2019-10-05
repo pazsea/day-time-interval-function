@@ -1,7 +1,10 @@
+//Function need daysAndTimeSlots and options object. Then optionally function that will run within time range or out of time range or both situations.
+
 module.exports.intervalChecker = (
   daysAndTimeSlots,
   options,
-  myAwesomeFunction
+  functionWithinRange,
+  functionOutOfRange
 ) => {
   var weekdays = [
     "sunday",
@@ -57,25 +60,25 @@ module.exports.intervalChecker = (
     minute: "2-digit"
   });
 
-  console.log(
-    "This is the time from where I as a user am right now " +
-      d.toLocaleTimeString(navigator.language, {
-        hour: "2-digit",
-        minute: "2-digit"
-      })
-  );
+  // console.log(
+  //   "This is the time from where I as a user am right now " +
+  //     d.toLocaleTimeString(navigator.language, {
+  //       hour: "2-digit",
+  //       minute: "2-digit"
+  //     })
+  // );
 
-  console.log(
-    "This is the time from which the developer has set scheduled times " +
-      convertedTime
-  );
+  // console.log(
+  //   "This is the time from which the developer has set scheduled times " +
+  //     convertedTime
+  // );
 
   if (currentDayState) {
     if (
       options.timeFormat === 24 &&
       isInRange(convertedTime, pickedTimeSlots)
     ) {
-      myAwesomeFunction();
+      functionWithinRange && functionWithinRange();
     } else if (options.timeFormat === 12) {
       var myNativeTimeSlots = daysAndTimeSlots[currentDayIndex].time;
 
@@ -89,14 +92,14 @@ module.exports.intervalChecker = (
         myNativeTimeSlots.length === convertedTimeSlots.length &&
         isInRange(convertedTime, convertedTimeSlots)
       ) {
-        myAwesomeFunction();
+        functionWithinRange && functionWithinRange();
       } else {
-        console.log("Not the right time for my Awesome function to run");
+        functionOutOfRange && functionOutOfRange();
       }
     } else {
-      console.log("Not the right time for my Awesome function to run");
+      functionOutOfRange && functionOutOfRange();
     }
   } else {
-    console.log("Wrong day for my Awesome function to run :(");
+    functionOutOfRange && functionOutOfRange();
   }
 };
