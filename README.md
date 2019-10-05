@@ -1,6 +1,5 @@
 ## 🕜 Day/Time interval checker
 
-
 I wanted to create a function that I could just enter which days and at what range of time during those days a function would run.
 Also this function would run at that time every week.
 For example: If I had a store that is open between 10:00 - 15:00 every monday, I would like to run a function that changes from "closed" paragraph to an "open" paragraph and vice versa.
@@ -27,7 +26,7 @@ In your root folder for you project, open up an terminal and enter:
   
 
 ## 💻 How to use this function
-**1.** Import FUNCTION into you project.
+**1.** Import the function into you project.
 
    ```shell
    import { intervalChecker } from "day-interval-function";
@@ -36,7 +35,7 @@ In your root folder for you project, open up an terminal and enter:
 
 **2.** Create the option variable.
 
- Write you timezone and time format. This package supports both 24/12 hour.
+ Write your timezone and time format. This package supports both 24 and 12 hour format.
 
    ```shell
    const options = { 
@@ -51,7 +50,7 @@ In your root folder for you project, open up an terminal and enter:
 
 **3.** Create the dayAndTimeSlots variable
 
-Enter which days and time slots that you want your own function to run. From beginning to end. Doesnt support range over midnight.
+Enter which days and time slots that you want your own function to run. First string in time slot array is beginning time and the second is the ending time. Doesnt support range over midnight. For that you need to use change two days to true.
 
    ```shell
    const daysAndTimeSlots = [
