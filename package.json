@@ -1,0 +1,27 @@
+{
+  "name": "day-interval-function",
+  "version": "1.0.0",
+  "description": "Run your own functions on certain weekdays and time slots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pazsea/day-time-interval-function.git"
+  },
+  "keywords": [
+    "run",
+    "interval",
+    "function",
+    "time",
+    "day",
+    "days"
+  ],
+  "author": "Patrick Sjöberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pazsea/day-time-interval-function/issues"
+  },
+  "homepage": "https://github.com/pazsea/day-time-interval-function#readme"
+}
