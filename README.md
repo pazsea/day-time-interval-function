@@ -5,7 +5,10 @@ Also this function would run at that time every week.
 For example: If I had a store that is open between 10:00 - 15:00 every monday, I would like to run a function that changes from "closed" paragraph to an "open" paragraph and vice versa.
 
 So I created this npm package! Hope it works well!
-Keep on reading to see how you can implement it.
+Keep on reading to see how you can implement it and test it out in the 
+  <a href="https://codesandbox.io/embed/long-cherry-52c88?fontsize=14" target="_blank">
+    Live demo.
+  </a>
 
 ## What’s In This Document
 
@@ -102,11 +105,13 @@ intervalChecker(daysAndTimeSlots, options, functionWithinRange, functionOutOfRan
 ```
 
    <br>
-   If you periodically need to check if the time slot has occured and then run your own function, you could use a setInterval like so (this runs the intervalChecker function every 5 minutes):
+<p>If you periodically need to check if the time slot has occured to run your own function. You need to set a setInterval, though I've been experimenting with React Hooks recently, this does not work that good. I advise you to look at the guru Dan Abramov blog about this: <a href="https://overreacted.io/making-setinterval-declarative-with-react-hooks/" target="_blank">https://overreacted.io/making-setinterval-declarative-with-react-hooks/ </a>
+   
+<br>Here is an working example with Dan's tutorial that runs every 10 minutes. Remember that you need to implement Dans custom hook useInterval.</p>
    
    ```shell
-   setInterval(() => {
-  intervalChecker(daysAndTimeSlots, options, functionWithinRange, functionOutOfRange)
-}, 300000)
+   useInterval(() => {
+    intervalChecker(daysAndTimeSlots, options, functionWithinRange, fucntionOutOfRange)
+  }, 600000)
 
-```
+  ```
